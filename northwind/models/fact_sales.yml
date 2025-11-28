@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Sales fact table. One row per product per order (order line item level)
+    columns:
+      - name: customerkey
+        description: Dimension key for dim_customer
+      - name: employeekey
+        description: Dimension key for dim_employee
+      - name: productkey
+        description: Dimension key for dim_product
+      - name: orderdatekey
+        description: Dimension key for dim_date (order date)
+      - name: orderid
+        description: Degenerate dimension - order id
+      - name: quantity
+        description: Quantity of product ordered
+      - name: unitprice
+        description: Unit price of product
+      - name: discount
+        description: Discount applied
+      - name: extendedprice
+        description: Extended price (quantity * unitprice * (1-discount))
